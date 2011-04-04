@@ -1,13 +1,31 @@
 # hanoi
 
-FIXME: write description
+A version of the Towers of Hanoi, that uses an iterative algorithm,
+rather that the traditional recursive algorithm.  It is actually still
+a recursive algorithm, using the clojure loop/recur construct.  In
+other lisps it would be tail recursive.  This is important, in that
+the stack size is bounded; it could solve an arbitrarily large tower
+problem without blowing the stack.
 
 ## Usage
 
-FIXME: write
+Err, usage is a bit weak at the moment. It was developed using
+Leiningen (https://github.com/technomancy/leiningen) and
+Lazytest (https://github.com/stuartsierra/lazytest).
+
+The easiest way
+to run it is probably:
+
+$ lein deps
+$ java -cp "src:test:classes:lib/*:lib/dev/*" lazytest.main src test
+
+This will run the lazytest stuff once.  If you want to play around
+with stuff, you can run in watch mode:
+
+$ java -cp "src:test:classes:lib/*:lib/dev/*" lazytest.watch src test
 
 ## License
 
-Copyright (C) 2011 FIXME
+Copyright (C) 2011 Hunter Kelly
 
 Distributed under the Eclipse Public License, the same as Clojure.
